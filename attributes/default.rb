@@ -10,7 +10,7 @@ default['storm']['version'] = "0.8.2"
 default['storm']['download_url'] = "https://dl.dropbox.com/u/133901206"
 default['storm']['root_dir'] = "/opt/storm"
 default['storm']['log_dir'] = "/var/log/storm"
-default['storm']['cluster_role'] = ""
+default['storm']['cluster_role'] = "storm-default"
 
 # general storm attributes
 default['storm']['java_lib_path'] = "/usr/local/lib:/opt/local/lib:/usr/lib"
