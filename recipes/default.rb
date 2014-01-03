@@ -18,6 +18,7 @@
 
 include_recipe "java"
 include_recipe "runit"
+include_recipe "storm::nimbus"
 
 
 install_dir = "#{node['storm']['root_dir']}/storm-#{node['storm']['version']}"
