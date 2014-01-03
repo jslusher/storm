@@ -28,7 +28,7 @@ node.set['storm']['bin_dir'] = "#{install_dir}/bin"
 node.set['storm']['install_dir'] = install_dir
 
 # install dependency packages
-%w{unzip python zeromq jzmq}.each do |pkg|
+%w{unzip python libzmq-dev jzmq}.each do |pkg|
   package pkg do
     action :install
   end
