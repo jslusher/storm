@@ -28,11 +28,12 @@ node.set['storm']['bin_dir'] = "#{install_dir}/bin"
 node.set['storm']['install_dir'] = install_dir
 
 # install dependency packages
-%w{unzip python libzmq-dev jzmq}.each do |pkg|
+%w{unzip python libzmq-dev}.each do |pkg|
   package pkg do
     action :install
   end
 end
+
 
 #locate the nimbus for this storm cluster
 if node.recipes.include?("storm::nimbus")
