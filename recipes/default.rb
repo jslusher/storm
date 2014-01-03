@@ -85,12 +85,12 @@ remote_file "#{Chef::Config[:file_cache_path]}/storm-#{node[:storm][:version]}.z
 end
 
 # uncompress the application tarball into the install directory
-execute "tar" do
+execute "unzip" do
   user    "storm"
   group   "storm"
   creates node['storm']['lib_dir']
   cwd     node['storm']['root_dir']
-  command "tar zxvf #{Chef::Config[:file_cache_path]}/storm-#{node['storm']['version']}.tar.gz"
+  command "unzip #{Chef::Config[:file_cache_path]}/storm-#{node['storm']['version']}.zip"
 end
 
 # create a link from the specific version to a generic current folder
